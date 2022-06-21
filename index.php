@@ -1,6 +1,12 @@
 <?php
     $testo = "Volevo andare al mare ma alla fine sono andato in chiesa";
     $testo_censurato = "";
+
+    strlen($testo);
+
+    $brutta_parola = str_replace('chiesa', '***', $testo);
+    echo $brutta_parola;
+
 ?>
 
 <!DOCTYPE html>
@@ -26,6 +32,7 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
     <h1>
         <?php echo $testo ?>
     </h1>
+    
 
 </body>
 </html>
