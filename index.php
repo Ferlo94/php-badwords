@@ -2,7 +2,9 @@
     $testo = "Volevo andare al mare ma alla fine sono andato in chiesa";
     $testo_censurato = "";
 
-    strlen($testo);
+    $lunghezza_testo = strlen($testo);
+    $lunghezza_testo_censurato = strlen($testo_censurato);
+
 
     $parola_censurata = str_replace('chiesa', '***', $testo);
 
@@ -35,11 +37,17 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
     <p>
         <?php echo $testo ?>
     </p>
+
+    <i>
+        Testo lungo <?php echo $lunghezza_testo ?> lettere.
+    </i>
+
     <h2>Testo censurato</h2>
+
     <p>
         <?php echo $parola_censurata ?>
     </p>
-    
+  
 
 </body>
 </html>
