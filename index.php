@@ -4,8 +4,8 @@
 
     strlen($testo);
 
-    $brutta_parola = str_replace('chiesa', '***', $testo);
-    echo $brutta_parola;
+    $parola_censurata = str_replace('chiesa', '***', $testo);
+
 
 ?>
 
@@ -30,8 +30,15 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 -->
 
     <h1>
-        <?php echo $testo ?>
+        VACANZE ALTERNATIVE
     </h1>
+    <p>
+        <?php echo $testo ?>
+    </p>
+    <h2>Testo censurato</h2>
+    <p>
+        <?php echo $parola_censurata ?>
+    </p>
     
 
 </body>
