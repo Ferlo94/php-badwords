@@ -1,6 +1,7 @@
 <?php
     $testo = "Volevo andare al mare ma alla fine sono andato in chiesa";
-    $parola_censurata = str_replace('chiesa', '***', $testo);
+    $parola_da_censurare = $_GET['parola'];
+    $testo_censurato = str_replace($parola_da_censurare, '***', $testo);
 ?>
 
 <!DOCTYPE html>
@@ -23,6 +24,11 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
 
 -->
 
+    <form action="" method="GET">
+        <input type="text" name="parola">
+        <button type="submit">censura</button>
+    </form>
+
     <h1>
         VACANZE ALTERNATIVE
     </h1>
@@ -39,12 +45,12 @@ Stampare di nuovo il paragrafo e la sua lunghezza, dopo aver sostituito con tre 
     <h2>Testo censurato</h2>
 
     <p>
-        <?php echo $parola_censurata ?>
+        <?php echo $testo_censurato ?>
     </p>
 
     <i>
         <u>
-            Testo lungo <?= strlen($parola_censurata) ?> lettere.
+            Testo lungo <?= strlen($testo_censurato) ?> lettere.
         </u>
     </i>
   
